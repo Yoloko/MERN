@@ -16,9 +16,15 @@ if (process.env.NODE_ENV === "production") {
 app.use(routes);
 
 // Connect to the Mongo DB
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/reactreadinglist");
+//mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/googlebooks");
+mongoose.connect(process.env.MONGODB_URI || "mongodb://yoloko:Godisgreat@44@ads125871.mlab.com:25871/heroku_0xn0jnk7"
+);
 
 // Start the API server
+//if (process.env.NODE_ENV === "production"){
+  //app.use(express.static("client/build"));
+
+//}
 app.listen(PORT, function() {
   console.log(`🌎  ==> API Server now listening on PORT ${PORT}!`);
 });
